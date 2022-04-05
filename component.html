@@ -26,14 +26,14 @@
                         <h2>모달 팝업</h2>
 
                         
-                        <a href="#modal-name" class="btn-modalOpen"><span>팝업 열기</span></a>
-                        <a href="#modal-name2" class="btn-modalOpen"><span>팝업 열기</span></a>
+                        <button data-target="modal-open1" data-toggle="modal"><span>팝업 열기</span></button>
+                        <button data-target="modal-open2" data-toggle="modal"><span>팝업 열기</span></button>
 
-                        <div class="modal" id="modal-name">
+                        <div class="modal" id="modal-open1">
                             <div class="modal-wrap">
                                 <div class="modal-header">
                                     <h2 class="tit">팝업 타이틀</h2>
-                                    <button type="button" class="btn_modalClose" href="#modal-name"><i class="ico-close ico-24"><span class="blind">닫기</span></i></button>
+                                    <button type="button" class="btn_modalClose" data-dismiss="modal"><i class="ico-close ico-24"><span class="blind">닫기</span></i></button>
                                 </div>
                                 <div class="modal-content">
                                     <p>팝업 내용</p>
@@ -41,23 +41,23 @@
                                     <img src="https://file2.nocutnews.co.kr/newsroom/image/2020/09/24/20200924213008312940_0_710_654.jpg">
                                 </div>
                                 <div class="modal-footer"> 
-                                    <button type="button" class="btn-m btn-default btn_modalClose" href="#modal-name">취소</button>
-                                    <button type="button" class="btn-m btn-primary">확인</button>
+                                    <button type="button" class="btn-m btn-default" data-dismiss="modal">취소</button>
+                                    <button type="button" class="btn-m btn-primary" data-dismiss="modal">확인</button>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="modal" id="modal-name2">
+                        <div class="modal" id="modal-open2">
                             <div class="modal-wrap">
                                 <div class="modal-header">
                                     <h2 class="tit">팝업 타이틀2</h2>
-                                    <button type="button" class="btn_modalClose" href="#modal-name2"><i class="ico-close ico-24"><span class="blind">닫기</span></i></button>
+                                    <button type="button" class="btn_modalClose" data-dismiss="modal"><i class="ico-close ico-24"><span class="blind">닫기</span></i></button>
                                 </div>
                                 <div class="modal-content">
                                     <p>팝업 내용</p>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn-m btn-default btn_modalClose" href="#modal-name2">취소</button>
+                                    <button type="button" class="btn-m btn-default btn_modalClose" data-dismiss="modal">취소</button>
                                     <button type="button" class="btn-m btn-primary">확인</button>
                                 </div>
                             </div>
@@ -69,10 +69,7 @@
                     </div>
                     <!--//section-->
                     
-                    <div class="section">
-                        
-                        <button class="btn" id="btnScrap">Show Notification</button>
-                    </div>
+
                 </div>
             </div>
         </div>

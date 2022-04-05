@@ -1,4 +1,5 @@
 .blind{width:1px;height:1px;font-size:0;line-height:0;overflow:hidden;visibility:hidden;position:absolute;}
+button{display:inline-block;width:inherit;height:inherit;}
 
 /*icon*/
 .ico{
@@ -150,7 +151,7 @@
       font-weight:600;
   }
 
-  .modal .modal-header .btn_close{
+  .modal .modal-header .btn_modalClose{
       position:absolute;
       top:16px;
       right:24px;
