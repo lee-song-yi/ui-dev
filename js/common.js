@@ -1,41 +1,4 @@
-$(document).ready(function(){
-    //클래스를 가져와서 이벤트 구현
-	var $toggleIcon = $('.btn_toggle');
-	
-	$toggleIcon.on('click', function(){		
-		toggleIcon($(this));
-	});
 
-    var $toolTip = $('.btn_tooltip');
-	$toolTip.on('click', function(){
-        var $targetparents = $(this).parents()		
-		toggleTooltip($(this));
-	});
-});
-
-//토글 아이콘
-function toggleIcon(target){
-    target.toggleClass('on');
-}
-
-//토글 툴팁
-function toggleTooltip(target){
-    target.toggleClass('on');
-}
-
-//tooltip
-function toolTip(){
-    
-}
-
-//modal popup 
-function modalPopOpen(){
-
-}
-
-function modalPopClose(){
-
-}
 
 //스크랩 툴팁
 const btnScrap = document.getElementById('btnScrap')
@@ -64,6 +27,36 @@ function createNotification(tearget) {
         notif.remove()
     }, 3000)
 }
+
+//모달 팝업
+var targetBtn = document.querySelectorAll('.btn-modalOpen');
+var targetBtnClose = document.querySelectorAll('.btn_modalClose');
+
+var targetID;
+
+// 팝업 열기
+for(var i = 0; i < targetBtn.length; i++){
+	targetBtn[i].addEventListener('click', function(e){
+	  e.preventDefault();	 
+	  targetID = this.getAttribute('href');
+	  alert(targetID);
+	  document.querySelector(targetID).classList.add('on')
+	});
+  }
+
+// 팝업 닫기
+for(var j = 0; j < targetBtnClose.length; j++){
+	targetBtnClose[j].addEventListener('click', function(e){
+		e.preventDefault();
+		
+		targetID = this.getAttribute('href');
+		alert(targetID);
+		document.querySelector(targetID).classList.remove('on')
+	});
+  }
+  
+
+
 
 
 

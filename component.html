@@ -6,7 +6,7 @@
         <link href="css/reset.css" rel="stylesheet">
         <link href="css/common.css" rel="stylesheet">
         <link href="css/component.css" rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
         
     </head>
 
@@ -24,7 +24,48 @@
 
                     <div class="section">
                         <h2>모달 팝업</h2>
-                        <button type="button"><span>팝업 열기</span></button>
+
+                        
+                        <a href="#modal-name" class="btn-modalOpen"><span>팝업 열기</span></a>
+                        <a href="#modal-name2" class="btn-modalOpen"><span>팝업 열기</span></a>
+
+                        <div class="modal" id="modal-name">
+                            <div class="modal-wrap">
+                                <div class="modal-header">
+                                    <h2 class="tit">팝업 타이틀</h2>
+                                    <button type="button" class="btn_modalClose" href="#modal-name"><i class="ico-close ico-24"><span class="blind">닫기</span></i></button>
+                                </div>
+                                <div class="modal-content">
+                                    <p>팝업 내용</p>
+                                    <img src="https://file2.nocutnews.co.kr/newsroom/image/2020/09/24/20200924213008312940_0_710_654.jpg">
+                                    <img src="https://file2.nocutnews.co.kr/newsroom/image/2020/09/24/20200924213008312940_0_710_654.jpg">
+                                </div>
+                                <div class="modal-footer"> 
+                                    <button type="button" class="btn-m btn-default btn_modalClose" href="#modal-name">취소</button>
+                                    <button type="button" class="btn-m btn-primary">확인</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal" id="modal-name2">
+                            <div class="modal-wrap">
+                                <div class="modal-header">
+                                    <h2 class="tit">팝업 타이틀2</h2>
+                                    <button type="button" class="btn_modalClose" href="#modal-name2"><i class="ico-close ico-24"><span class="blind">닫기</span></i></button>
+                                </div>
+                                <div class="modal-content">
+                                    <p>팝업 내용</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn-m btn-default btn_modalClose" href="#modal-name2">취소</button>
+                                    <button type="button" class="btn-m btn-primary">확인</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <style>
+
+                        </style>
                     </div>
                     <!--//section-->
                     
