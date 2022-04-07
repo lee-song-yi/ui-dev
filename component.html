@@ -13,21 +13,13 @@
     <body>
         <div class="wrap">
             <div class="container">
-                <div class="inner">
-                    <div class="section">
-                        <h2>토글 아이콘</h2>
-                        <button type="button" class="btn_like btn btn_toggle ico ico_36"><span class="blind">좋아요</span></button>
-                    
-                        <button type="button" class="btn_scrap btn btn_toggle ico ico_36" id="btnScrap"><span class="blind">스크랩</span></button>
-                    </div>
-                    <!--//section-->
+                <div class="inner">                    
 
                     <div class="section">
                         <h2>모달 팝업</h2>
-
                         
-                        <button class="btn-modalOpen" data-target="modal-open1">팝업 열기</button>
-                        <button class="btn-modalOpen" data-target="modal-open2"><span>팝업 열기</span></button>
+                        <button class="btn-modalOpen" data-target="modal-open1">팝업1 열기 버튼</button>
+                        <button class="btn-modalOpen" data-target="modal-open2"><span>팝업2 열기 버튼</span></button>
 
                         <div class="modal" id="modal-open1">
                             <div class="modal-wrap">
@@ -46,22 +38,24 @@
                                 </div>
                             </div>
                         </div>
+                        <!--//팝업1-->
 
                         <div class="modal" id="modal-open2">
                             <div class="modal-wrap">
                                 <div class="modal-header">
                                     <h2 class="tit">팝업 타이틀2</h2>
-                                    <button type="button" class="btn_modalClose" data-dismiss="modal"><i class="ico-close ico-24"><span class="blind">닫기</span></i></button>
+                                    <button type="button" class="btn-modalClose"  data-target="modal-open2"><i class="ico-close ico-24"><span class="blind">닫기</span></i></button>
                                 </div>
                                 <div class="modal-content">
                                     <p>팝업 내용</p>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn-m btn-default btn_modalClose" data-dismiss="modal">취소</button>
-                                    <button type="button" class="btn-m btn-primary">확인</button>
+                                    <button type="button" class="btn-m btn-default btn-modalClose" data-target="modal-open2">취소</button>
+                                    <button type="button" class="btn-m btn-primary" data-dismiss="modal">확인</button>
                                 </div>
                             </div>
                         </div>
+                        <!--//팝업2-->
 
                         <style>
 
