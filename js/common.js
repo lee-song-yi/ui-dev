@@ -1,7 +1,8 @@
 // 모달 팝업
-var targetBtn = document.querySelectorAll('.btn-modalOpen');
-var targetBtnClose = document.querySelectorAll('.btn-modalClose');
+var targetBtn = document.querySelector('.btn-modalOpen');
+var targetBtnClose = document.querySelector('.btn-modalClose');
 
+/*
 // 팝업 열기
 for(var i = 0; i < targetBtn.length; i++)
 {
@@ -26,9 +27,49 @@ for(var j = 0; j < targetBtnClose.length; j++){
         document.querySelector('.overlay').remove();
     });
 }
+*/
+
+BindingButton(targetBtn, OpenPopup);
+BindingButton(targetBtnClose, ClosePopup);
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////
+
+function BindingButton(buttons, action)
+{
+    
+        buttons.addEventListener('click', function()
+        {	   
+            targetID = this.getAttribute('data-target');
+            action(targetID);                 
+        });
+    
+}
+
+
+function OpenPopup(aOpenTargetID)
+{
+    document.getElementById(aOpenTargetID).classList.add('on');
+    createDiv();
+}
+
+function ClosePopup(aCloseTargetID)
+{
+    document.getElementById(aCloseTargetID).classList.remove('on');
+    document.querySelector('.overlay').remove();
+}
+
+
+
+
+
 
 //팝업 딤
-function createDiv() {    
+function createDiv() 
+{    
     const newDiv = document.createElement('div');
     newDiv.classList.add('overlay');    
     document.body.appendChild(newDiv);
